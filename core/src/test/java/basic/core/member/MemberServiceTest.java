@@ -1,4 +1,4 @@
-package basic.core;
+package basic.core.member;
 
 import basic.core.member.Grade;
 import basic.core.member.Member;
@@ -19,7 +19,7 @@ public class MemberServiceTest {
         //given
         Member member = new Member(1L, "Member", Grade.BASIC);
         //when
-        this.memberService.join(member);
+        memberService.join(member);
         Member findMember = memberService.findMember(member.getId());
         //then
         Assertions.assertThat(member).isEqualTo(findMember);
